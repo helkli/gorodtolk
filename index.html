@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ГородТолк — форум</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Форум «ГородТолк»</h1>
+  <p>Обсуждения городских новостей</p>
+</header>
+
+<section id="topic">
+  <h2>Тема: Новый парк на набережной</h2>
+  <p>Город объявил о планах реконструкции набережной и строительстве
+  нового парка. Что вы думаете об этом проекте?</p>
+</section>
+
+<section id="add-comment">
+  <h2>Оставить комментарий</h2>
+  <form id="commentForm">
+    <label>Имя<br><input type="text" id="commentName" required></label><br><br>
+    <label>Комментарий<br><textarea id="commentText" rows="3" required></textarea></label><br><br>
+    <button type="submit">Опубликовать</button>
+  </form>
+  <p id="moderationNotice"></p>
+</section>
+
+<section id="feed">
+  <h2>Лента комментариев <span id="queueCounter" class="queue-counter">На проверке: 0</span></h2>
+  <p id="feedSubtitle">Общая лента</p>
+  <label id="moderatorToggle">
+    <input type="checkbox" id="moderatorMode"> Режим модератора
+  </label>
+  <button type="button" id="clearFeedBtn" class="clear-feed-btn" hidden>Очистить ленту</button>
+  <ul id="commentList"></ul>
+</section>
+
+<footer>
+  <p>ГородТолк — форум для обсуждения городских новостей</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

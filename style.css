@@ -1,0 +1,154 @@
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background: #eef1f5;
+  margin: 0;
+  color: #202730;
+}
+
+header {
+  background: #35424f;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+section, footer {
+  max-width: 600px;
+  margin: 14px auto;
+  padding: 14px 18px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-size: 16px;
+  color: #35424f;
+}
+
+#commentForm input, #commentForm textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+#commentForm button {
+  background: #35424f;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#moderationNotice {
+  font-size: 13px;
+  color: #b26a00;
+}
+
+/* UI-03: нейтральное зелёное уведомление об успешной отправке. */
+#moderationNotice.success {
+  color: #1f7a33;
+}
+
+/* Этап 6: счётчик очереди в заголовке ленты (UI-06). */
+.queue-counter {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 10px;
+  border-radius: 10px;
+  background: #cc3300;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* Этап 6: переключатель «Режим модератора» над лентой (UI-05). */
+#moderatorToggle {
+  display: block;
+  margin: 6px 0 10px;
+  font-size: 13px;
+  color: #35424f;
+  cursor: pointer;
+  user-select: none;
+}
+
+#moderatorToggle input {
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+
+/* Этап 6: подпись под заголовком — «Общая лента» / «Очередь…» (UI-08). */
+#feedSubtitle {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #66717d;
+}
+
+/* Кнопка очистки ленты — видна только в режиме модератора (вне ТЗ,
+   добавлено по запросу после этапа 8). */
+#clearFeedBtn {
+  display: block;
+  margin: 0 0 10px;
+  padding: 5px 12px;
+  font-size: 12px;
+  border: 1px solid #cc3300;
+  background: #ffffff;
+  color: #cc3300;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#clearFeedBtn[hidden] {
+  display: none;
+}
+
+#clearFeedBtn:hover {
+  background: #fff3ee;
+}
+
+#commentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#commentList li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.comment-name {
+  font-weight: bold;
+}
+
+.comment-flagged {
+  border-left: 3px solid #cc3300;
+  padding-left: 8px;
+  background: #fff3ee;
+}
+
+.flag-label {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #cc3300;
+  color: #ffffff;
+  font-size: 11px;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #666666;
+}
